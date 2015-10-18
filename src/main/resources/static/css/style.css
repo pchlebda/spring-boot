@@ -1,0 +1,13 @@
+body {
+    background-color: #eee;
+}
+
+.logo {
+    margin: 0 auto;
+    width: 370px;
+    height: 105px;
+}
+
+.formDiv {
+    margin-top: 10vh;
+}
