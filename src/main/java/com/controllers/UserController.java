@@ -5,10 +5,7 @@ import com.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * Created by Piotr on 2015-10-10.
@@ -19,7 +16,7 @@ public class UserController {
     @Autowired
     private UserRepository userRepository;
 
-    @RequestMapping(value = "register")
+    @RequestMapping(value = "register", method = RequestMethod.POST)
     @ResponseBody
     public ResponseEntity<User> register(@RequestBody User user) {
         if (!exist(user)) {
